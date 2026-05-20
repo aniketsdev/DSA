@@ -12,6 +12,14 @@ def secondLargestNumber(arr: list) -> list:
     
     return secondLargest
 
+def LargestNumber(arr: list) -> int:
+    n = len(arr)
+    Largest = -1
+    for i in range(n):
+        if arr[i] > Largest:
+            Largest = arr[i]
+    
+    return Largest
 
 my_list = [12, 43, 23, 87, 11, 34]
-print(secondLargestNumber(my_list))
+print(f"Second Largest Number : {secondLargestNumber(my_list)} , Largest Number {LargestNumber(my_list)}")
