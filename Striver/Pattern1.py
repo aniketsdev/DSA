@@ -93,3 +93,23 @@ def ReversePattern(n):
 print("Reversed Pattern")
 print(f"{ReversePattern(5)}")
 
+
+# Given an integer n. You need to recreate the pattern given below for any value of N. Let's say for N = 5, the pattern should look like as below:
+
+# 1  2  3  4  5  
+# 1  2  3  4  
+# 1  2  3  
+# 1  2  
+# 1 
+
+def ReverseNumberPattern(n : int):
+    for i in range(n):
+        for j in range(n-i):
+            print(j+1, " ", end="")
+        print()
+
+
+print(f"\n Reversed Number Pattern \n")
+print(f"{ReverseNumberPattern(5)}")
+
+
