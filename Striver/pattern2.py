@@ -98,3 +98,52 @@ def diamondStarPattern(n: int):
 
 print(f"\n Diamond Star Pyramid \n")
 print(diamondStarPattern(5))
+
+
+# Pattern - 10: Half Diamond Star Pattern
+
+# Problem Statement: Given an integer N, print the following pattern : 5
+# Input Format: N = 3
+# Result: 
+#   *  
+#   **
+#   ***  
+#   **
+#   * 
+
+
+def HaifDiamondStarPattern(n : int):
+    for i in range(n):
+        print("*" * i)
+
+    for j in range(n):
+        print("*" * (n-j))
+
+
+print(f"\n Half Diamond Star Pyramid \n")
+print(HaifDiamondStarPattern(5))
+
+
+# Pattern - 11: Binary Number Triangle Pattern
+
+# Problem Statement: Given an integer N, print the following pattern : 5
+
+# Input Format: N = 3
+
+# Result: 
+
+
+def PrintBinaryPattern(n : int):
+    for i in range(n):
+        if i % 2 == 0:
+            val = 1
+        else:
+            val = 0
+        
+        for j in range(i+1):
+            print(val, " ", end="")
+            val = 1 - val
+        print()
+
+print(f" \n Binary Pattern \n")
+print(PrintBinaryPattern(5))
