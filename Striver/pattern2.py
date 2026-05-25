@@ -158,13 +158,28 @@ print(PrintBinaryPattern(5))
 
 # Problem Statement: Given an integer N, print the following pattern : 5
 
+# 1  
+# 1  2  
+# 1  2  3  
+# 1  2  3  4 
 
 def NumberCrownPattern(n: int):
     for i in range(n):
         for j in range(i):
-            print(j+1, end="")
+            print(j+1, " ", end="")
         print()
        
 
 print(f" \n Number Crown Pattern \n")
 print(NumberCrownPattern(5))
+
+
+# Pattern - 12 - b: Number Crown Pattern
+
+# Problem Statement: Given an integer N, print the following pattern : 5
+
+# 1                1
+# 1  2           2 1
+# 1  2  3      3 2 1
+# 1  2  3  4 4 3 2 1 
+
