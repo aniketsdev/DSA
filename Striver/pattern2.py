@@ -132,6 +132,11 @@ print(HaifDiamondStarPattern(5))
 
 # Result: 
 
+# 1  
+# 0  1  
+# 1  0  1  
+# 0  1  0  1  
+# 1  0  1  0  1  
 
 def PrintBinaryPattern(n : int):
     for i in range(n):
@@ -147,3 +152,19 @@ def PrintBinaryPattern(n : int):
 
 print(f" \n Binary Pattern \n")
 print(PrintBinaryPattern(5))
+
+
+# Pattern - 12: Number Crown Pattern
+
+# Problem Statement: Given an integer N, print the following pattern : 5
+
+
+def NumberCrownPattern(n: int):
+    for i in range(n):
+        for j in range(i):
+            print(j+1, end="")
+        print()
+       
+
+print(f" \n Number Crown Pattern \n")
+print(NumberCrownPattern(5))
