@@ -181,15 +181,23 @@ print(NumberCrownPattern(5))
 # 1                1
 # 1  2           2 1
 # 1  2  3      3 2 1
-# 1  2  3  4 4 3 2 1 
+# 1  2  3 4 4 3 2 1 
 
 # Patterm 13 : Right Angle triangle Numbers
 
 def RightAngledPattern(n : int):
-    for i in range(n):
-        print(" " * (n-i), end="")
+    for i in range(n+1):
+        for j in range(1, i+1):
+            print(j, end=" ")
+        
+        for j in range(2 * (n - i)):
+            print(" ", end=" ")
 
-        print(f"{i}" * i, " ", end=" ")
+        # spaces = 2 * (n - i)
+        # print("  " * spaces, end="")
+        
+        for j in range(i, 0, -1):
+            print(j, end=" ")
 
         print()
 
