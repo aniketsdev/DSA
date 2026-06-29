@@ -203,3 +203,27 @@ def RightAngledPattern(n : int):
 
 print(f"\n Right Angled Triangle Pattern \n")
 print(RightAngledPattern(5))
+
+
+# Pattern - 13: Increasing Number Triangle Pattern
+# Problem Statement: Given an integer N, print the following pattern :
+
+# 1
+# 2 3
+# 4 5 6
+# 7 8 9 10
+# 11 12 13 14 15
+
+def IncreasingNumberedPattern(n : int):
+    count = 1
+    for i in range(n):
+        for j in range(i):
+            print(count, " ", end="")
+            count += 1
+        print()
+
+
+print(f"\n Increasing Number Triangle Pattern \n")
+print(IncreasingNumberedPattern(5))
+
+
