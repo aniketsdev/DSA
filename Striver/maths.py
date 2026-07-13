@@ -60,3 +60,21 @@ def ReverseNumber(n: int):
 
 print(f"\n Reverse a Number \n")
 print(ReverseNumber(-1200))
+
+
+# Count digits in a number
+# Example 1:
+# Input:N = 12345
+# Output:5
+# Explanation:  The number 12345 has 5 digits.
+
+def CountDigit(n: int):    
+    count = 1
+    while n > 0:
+        n%=10
+        count+=1
+    
+    return count
+
+print(f"\n Count Digit  \n")
+print(CountDigit(12345))

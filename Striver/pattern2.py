@@ -227,3 +227,80 @@ print(f"\n Increasing Number Triangle Pattern \n")
 print(IncreasingNumberedPattern(5))
 
 
+# Pattern-14: Increasing Letter Triangle Pattern
+
+# A
+# AB
+# ABC
+# ABCD
+
+lower = "".join(chr(i) for i in range(65, 91))
+print(lower)
+
+import string
+print(string.ascii_letters)
+
+def IncreasingLetterPattern(n: int):
+    # alphabet = string.ascii_uppercase
+
+    for i in range(n):
+        for j in range(i):
+            print(chr(65+j), " ", end="")
+        print()
+
+print(f"\n Increasing Letter Triangle Pattern \n")
+print(IncreasingLetterPattern(5))
+
+
+# Pattern-15: Reverse Letter Triangle Pattern
+
+# ABCDE
+# ABCD
+# ABC
+# AB
+# A
+def DecresingLetterPattern(n: int):
+    for i in range(n):
+        for j in range(n-i):
+            print(chr(65+j), " " , end="")
+        print()
+
+print(f"\n Decresing Letter Triangle Pattern \n")
+print(DecresingLetterPattern(5))
+
+
+# Pattern-14: Alpha-Ramp Pattern
+
+# A
+# BB
+# CCC
+# DDDD
+def AlphaPattern(n: int):
+    count = 1
+    for i in range(n):
+        for j in range(i):
+            print(chr(64+i), " ", end="")
+        print()
+    
+print(f"\n Alpha Ramp Pattern \n")
+print(AlphaPattern(6))
+
+
+# Pattern-18: Alpha-Triangle Pattern
+
+# Problem Statement: Given an integer N, print the following pattern :
+
+# E
+# E D
+# E D C
+# E D C B
+# E D C B A
+def AlphaTriaglePattern(n: int):
+    for i in range(n+1):
+        for j in range(i):
+            print(chr(65 + n - i + j) , end=" ")
+        print()
+
+print("\n Alpha-Triangle Pattern Reverse")
+print(AlphaTriaglePattern(5))
+
