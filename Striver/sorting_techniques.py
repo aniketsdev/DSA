@@ -135,3 +135,51 @@ def insertionSort(arr: list):
 arr = [13, 46, 24, 52, 20, 9]
 print(f"/n Insertion Sort Algorithm ")
 print(insertionSort(arr))
+
+
+# Merge Sort
+# Think of Merge Sort as two separate problems:
+
+# Split the array until only one element remains.
+# Merge those single elements back in sorted order.
+
+# That's all Merge Sort does.
+class Solution:
+    def merge(self, arr, low, mid, high):
+        temp = []
+        left, right = low , mid  + 1
+
+        while left <= mid and right <= high:
+            # print("----------------", left <= mid, right >= high)
+            if arr[left] <= arr[right]:
+                temp.append(arr[left])
+                left+=1
+            else:
+                temp.append(arr[right])
+                right+=1
+        
+        while left <= mid:
+            temp.append(arr[left])
+            left+=1
+        
+        while right <= high:
+            temp.append(arr[right])
+            right+=1
+        
+        for i in range(low, high+1):
+            arr[i] = temp[i - low]
+
+    def mergeSort(self, arr, low, high):
+        if low >= high:
+            return
+        mid = (low + high) // 2
+        self.mergeSort(arr, low, mid)
+        self.mergeSort(arr, mid + 1, high)
+        self.merge(arr, low , mid, high)    
+
+
+arr_two = [3, 9, 1, 4, 7, 2]
+print("\n Merge Sort : \n")
+sol = Solution()
+sol.mergeSort(arr_two, 0, len(arr_two)-1)
+print(*arr_two)
