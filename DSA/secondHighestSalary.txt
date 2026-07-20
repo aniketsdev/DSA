@@ -5,3 +5,4 @@ select name , salary from Employee group by SALARY ORDER BY SALARY DESC limit 1,
 //Highest salary from employee
 
 selct salary from employee ORDER BY SALARY DESC LIMIT 1
+

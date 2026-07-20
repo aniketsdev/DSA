@@ -45,21 +45,22 @@ print(CountAllDigits(234))
 def ReverseNumber(n: int):
     reverse = 0
     lastDigit = 0
-    isNegative = False
+    sign = False
 
-    if n < 0 :
-        isNegative = True
-        n = abs(n)
+    if n <= 0 :
+        sign = True
+        abs(n)
     
     while n > 0:
+        # print("----", n)
         lastDigit = n % 10
         reverse = reverse * 10 + lastDigit
         n = n // 10
     
-    return -reverse if isNegative else reverse
+    return reverse
 
 print(f"\n Reverse a Number \n")
-print(ReverseNumber(-1200))
+print(ReverseNumber(1289))
 
 
 # Count digits in a number
@@ -69,12 +70,52 @@ print(ReverseNumber(-1200))
 # Explanation:  The number 12345 has 5 digits.
 
 def CountDigit(n: int):    
-    count = 1
+    count = 0
     while n > 0:
-        n%=10
-        count+=1
-    
+        count += 1
+        n = n // 10
+
     return count
 
 print(f"\n Count Digit  \n")
-print(CountDigit(12345))
+print(CountDigit(123450293))
+
+# //Check if a number is Palindrome or Not
+# Problem Statement: Given an integer N, return true if it is a palindrome else return false.
+def palindromeNumber(n : int):
+    reverse = 0
+    lastDigit = 0
+    original = n
+    
+    while n > 0 :
+        # print(n)
+        lastDigit = n % 10
+        reverse = lastDigit + reverse * 10
+        n = n // 10
+    
+    if reverse == original:
+        return True
+    
+    return False
+
+print(f"/n Palindrome number /n")
+print(palindromeNumber(101))
+
+# Print all Divisors of a given Number
+# A divisor of an integer N is a positive integer that divides N without leaving a remainder. In other words, if N is divisible by another integer without any remainder, then that integer is considered a divisor of N.
+
+class Solution:
+    def divisorOfNumber(self , n):
+        divisor = []
+
+        for i in range(1, n+1):
+            if n % i == 0:
+                divisor.append(i)
+        
+        return divisor
+
+sol = Solution()
+N = 12
+result = sol.divisorOfNumber(N)
+print(f"/n Print all Divisors of a given Number ")
+print(result)
