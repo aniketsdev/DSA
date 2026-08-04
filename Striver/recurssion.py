@@ -98,25 +98,106 @@ class Solution:
         
         # return reverseArr
         # Better Approach
-        n = len(arr)
-        p1 = 0
-        p2 = n-1
+        # n = len(arr)
+        # p1 = 0
+        # p2 = n-1
 
-        while p1 < p2:
-            arr[p1], arr[p2] = arr[p2], arr[p1]
-            p1 += 1
-            p2 -= 1
+        # while p1 < p2:
+        #     arr[p1], arr[p2] = arr[p2], arr[p1]
+        #     p1 += 1
+        #     p2 -= 1
         
-        return "Reverse Array is : ", arr
+        # return "Reverse Array is : ", arr
     
-    # 
-    
+        # reverseArr = []
+        n = len(arr)
 
-            
-            
+        # for i in range(n):
+        #     print("test",arr[n-i-1])
+        #     reverseArr.append(arr[n-i-1])
+
+        # return reverseArr
+
+        # p1 = 0
+        # p2 = n-1
+
+        # while p1 < p2:
+        #     arr[p1], arr[p2] = arr[p2], arr[p1]
+        #     p1+=1
+        #     p2-=1
+
+        # return arr
+
+        # Built in methods for Array
+        return arr[::-1]
+
+    #  Check if the given String is Palindrome or not
+    # Example 1:
+    # Input: Str =  “ABCDCBA”
+    # Output: Palindrome
+    # Explanation: String when reversed is the same as string.
+
+    # Example 2:
+    # Input: Str = “TAKE U FORWARD”
+    # Output: Not Palindrome
+    # Explanation: String when reversed is not the same as string.
+
+    def checkPalindromeNumber(self, str):
+        # left = 0
+        # right = len(str) - 1
+        # flag = False
+
+        # while left <= right:
+        #     if str[left] == str[right]:
+        #         flag = True
+        #         print("Test", str[left], str[right])
+        #     else :
+        #         flag = False
+
+        #     left+=1
+        #     right-=1
+
+
+        # return flag
+
+        left = 0
+        right = len(str) - 1
+        flag = True
+
+        while left < right:
+            if not str[left].isalnum():
+                left+=1
+
+            elif not str[right].isalnum():
+                right+=1
+
+            elif str[left].lower() != str[right].lower():
+                return "Not Palindrome"
+
+            else:
+                left+=1
+                right-=1
+
+        return "Palindrome"    
+        
+        # Optimze solution using recurssion
+    
+    def checkPalindromeNumberUsingRecurssion(self, i, s):
+        # Base Condition
+
+        if i > len(s) // 2:
+           return True
+
+        if s[i] != s[len(s) - i - 1]:
+            return False
+
+        return self.checkPalindromeNumberUsingRecurssion(i+1, s)
+
+
 
 if __name__ == "__main__":
     N = 5
+    rawN = "abcba"
     arr = [10,20,30,40]
 
     name = "Aniket"
@@ -129,6 +210,7 @@ if __name__ == "__main__":
     result4 = sol.sumOfNumber(N)
     result5 = sol.factorial(N)
     result6 = sol.reverseArray(arr)
-
+    result7 = sol.checkPalindromeNumber(rawN)
+    result8 = sol.checkPalindromeNumberUsingRecurssion(0, rawN)
     
-    print(f"{result}, \n {result2} , \n {result3} \n {result4} \n {result5}, \n {result6}")
+    print(f"{result}, \n {result2} , \n {result3} \n {result4} \n {result5}, \n {result6}, \n {result7} \n {result8}")
