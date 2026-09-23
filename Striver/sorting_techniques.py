@@ -36,15 +36,31 @@ print(Sorted_arr(my_arr))
 def selectionSort(arr: list):
     n = len(arr)
 
-    for i in range(n):
-        min_index = i
-        for j in range(i+1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
+    for boundry in range(n-1):
+        min_length = boundry
 
-        arr[i] , arr[min_index] = arr[min_index], arr[i]
-    
+        for current in range(boundry+1, n):
+            if arr[current] < arr[min_length]:
+                min_length = current
+
+        if arr[min_length] != arr[boundry]:
+            arr[min_length], arr[boundry] = arr[boundry] , arr[min_length]
+
     return arr
+
+    
+
+    # n = len(arr)
+
+    # for i in range(n):
+    #     min_index = i
+    #     for j in range(i+1, n):
+    #         if arr[j] < arr[min_index]:
+    #             min_index = j
+
+    #     arr[i] , arr[min_index] = arr[min_index], arr[i]
+    
+    # return arr
 
 arr = [13, 46, 24, 52, 20, 9]
 print(f"/n Selection Sort Algorithm ")

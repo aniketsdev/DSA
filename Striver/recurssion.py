@@ -194,7 +194,33 @@ class Solution:
         return self.checkPalindromeNumberUsingRecurssion(i+1, s)
 
 
+    def fibonacciSeries(self, n):
+        # Brute force approach
+        # if n == 0:
+        #     return 0
 
+        # elif n == 1:
+        #     return 1
+
+        # else:
+        #     fib = [0] * (n+1)
+        #     fib[0] = 0
+        #     fib[1] = 1
+
+        #     for i in range(2, n+1):
+        #         fib[i] = fib[i-1] + fib[i-2]
+
+        # return fib
+
+        # Using recurssion
+        # base condition
+
+        if n <= 1:
+            return n
+
+        # print("test", self.fibonacciSeries(n-1) + self.fibonacciSeries(n-2))
+        return self.fibonacciSeries(n-1) + self.fibonacciSeries(n-2)
+        
 if __name__ == "__main__":
     N = 5
     rawN = "abcba"
@@ -212,5 +238,9 @@ if __name__ == "__main__":
     result6 = sol.reverseArray(arr)
     result7 = sol.checkPalindromeNumber(rawN)
     result8 = sol.checkPalindromeNumberUsingRecurssion(0, rawN)
+    # result9 = sol.fibonacciSeries(N)
     
     print(f"{result}, \n {result2} , \n {result3} \n {result4} \n {result5}, \n {result6}, \n {result7} \n {result8}")
+    print("Fibbonaaci series")
+    for i in range(N+1):
+        print(sol.fibonacciSeries(i), end=" ")

@@ -19,15 +19,12 @@ def largest(arr):
     n = len(arr)
     LargestElement = 0
     for i in range(n):
-        # print(arr[i] , arr[i-1])
-        if arr[i] >= arr[i-1] and arr[i] >= LargestElement:
-            # print(arr[i])
-            LargestElement = arr[i]
-            # print(LargestElement)
-    
+       if arr[i] >= arr[i-1] and arr[i] >= LargestElement:
+           LargestElement = arr[i]
+
     return LargestElement
 
-arr = [8, 10, 5, 19, 9]
+arr = [8, 60, 5, 19, 9]
 print("\n Largest Element\n")
 print(largest(arr))
 
@@ -55,6 +52,20 @@ print(largest(arr))
 # Second Smallest : -1  
 # Second Largest : -1  
 def SecondLargestNumber(arr: list):
+    # n = len(arr)
+
+    # arr.sort()
+    # largest = 0
+    # SecondLargestNumber = 0
+
+    # for i in range(n):
+    #     if arr[i] >= arr[i-1] and arr[i] >= largest and arr[i] != arr[i-1]:
+    #         SecondLargestNumber = largest
+    #         largest = arr[i]
+
+    # return SecondLargestNumber
+    
+
     n = len(arr)
 
     if n <= 1:
@@ -88,17 +99,32 @@ def checkSortedArray(arr: list):
         return True
 
     # for i in range(n):
-    #    for j in range(i, n):
-    #        if arr[i] > arr[j]:
-    #            return False
+    #     for j in range(i+1, n):
+    #         if arr[j] <= arr[i]:
+    #             return False
+    
     for i in range(1, n):
         if arr[i] < arr[i-1]:
             return False
-    
+
     return True
 
-arr = [1, 2, 13, 8, 10]
+arr = [1, 2, 3, 8, 10]
 print("\n Check sorted Array \n ")
 print(checkSortedArray(arr))
 
 
+# Remove Duplicates in-place from Sorted Array
+
+# Problem Statement: Given an integer array sorted in non-decreasing order, remove the duplicates in place such that each unique element appears only once. The relative order of the elements should be kept the same.
+# If there are k elements after removing the duplicates, then the first k elements of the array should hold the final result. It doesn't matter what you leave beyond the first k elements.
+
+def removeDuplicatesIn(arr: list):
+    arr = 
+
+
+arr = [1, 1, 3, 3, 10, 34]
+print("\n Remove Duplicates in-place from Sorted Array \n ")
+print(removeDuplicatesIn(arr))
+
+    

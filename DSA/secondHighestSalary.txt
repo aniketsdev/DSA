@@ -6,3 +6,12 @@ select name , salary from Employee group by SALARY ORDER BY SALARY DESC limit 1,
 
 selct salary from employee ORDER BY SALARY DESC LIMIT 1
 
+//print salry that greater than average salary
+
+selct * from employee where salary > (select AVG(salary) from employee)
+
+
+
+// Duplicate email in person table print
+
+SELECT email from Person GROUP BY email HAVING COUNT(*) > 1;
