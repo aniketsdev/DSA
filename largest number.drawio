@@ -28,7 +28,7 @@
         <mxCell id="r6uMZ0jSqUghmGDPm4vJ-16" edge="1" parent="1" source="r6uMZ0jSqUghmGDPm4vJ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r6uMZ0jSqUghmGDPm4vJ-15" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r6uMZ0jSqUghmGDPm4vJ-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="i &amp;lt;= N" vertex="1">
+        <mxCell id="r6uMZ0jSqUghmGDPm4vJ-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="i &amp;lt;&lt;span style=&quot;text-decoration-line: inherit; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;N&lt;/span&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="415" y="410" as="geometry" />
         </mxCell>
         <mxCell id="r6uMZ0jSqUghmGDPm4vJ-14" edge="1" parent="1" source="r6uMZ0jSqUghmGDPm4vJ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r6uMZ0jSqUghmGDPm4vJ-13" value="">
